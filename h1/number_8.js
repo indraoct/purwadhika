@@ -8,8 +8,8 @@ let start_hour = 9; //waktu berangkat
  * jika jarak = kec * waktu
  * dan t = waktu
  * maka 
- *    s - ( av * x jam) + (bv * x jam)) = 0 
- * <=> s km - (avkm/jam * t jam  + bv km/jam *x jam ) = 0
+ *    s - ( av * t jam) + (bv * t jam)) = 0 
+ * <=> s km - (avkm/jam * t jam  + bv km/jam *t jam ) = 0
  * <=> s km = (av * t jam) km + (40 * t jam) km
  * <=> s km = (av + bv )t * jam * km
  *     t  = s/(av + bv)  jam
