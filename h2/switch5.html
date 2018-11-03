@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Switch 5</title>
+</head>
+<body>
+    <script>
+        var massa = prompt(" Sebutkan massa anda (KG) ");
+        var tinggi = prompt(" Sebutkan tinggi anda (Meter) ");
+        var IMT = massa / Math.pow(tinggi,2);
+
+        switch(true){
+            case IMT < 18.5 : 
+                alert("Berat badan anda kurang");
+            break;
+            case IMT >= 18.5 && IMT <=24.9 : 
+                alert("Berat badan anda ideal");
+            break;
+            case IMT > 24.9 && IMT <= 29.9 : 
+                alert("Berat badan anda berlebihan");
+            break;
+            case IMT > 29.9 && IMT <= 39.9 : 
+                alert("Berat badan sangat berlebihan");
+            break;
+            case IMT > 39.9 : 
+                alert("Anda obesitas");
+            break;
+        }
+    </script>
+</body>
+</html>
