@@ -2,6 +2,8 @@ var tgl = new Date();
 let namaBulan;
 let namaHari;
 let menit;
+let detik;
+let jam;
 
 switch (tgl.getMonth()){
     case 0:
@@ -65,10 +67,22 @@ switch(tgl.getDay()){
     break;
 }
 
-if(tgl.getMinutes() < 9){
-    menit = "0"+tgl.getMinutes()
+if(tgl.getMinutes() < 10){
+    menit = "0"+tgl.getMinutes();
 }else{
-    menit = tgl.getMinutes()
+    menit = tgl.getMinutes();
 }
 
-console.log("Hari ini "+namaHari+", "+tgl.getDate()+" "+namaBulan+" "+tgl.getFullYear()+" Pukul "+tgl.getHours()+":"+menit+":"+tgl.getSeconds());
+if(tgl.getSeconds() < 10){
+    detik = "0"+tgl.getSeconds();
+}else{
+    detik = tgl.getSeconds();
+}
+
+if(tgl.getHours() < 10){
+    jam = "0"+tgl.getHours();
+}else{
+    jam = tgl.getHours();
+}
+
+console.log("Hari ini "+namaHari+", "+tgl.getDate()+" "+namaBulan+" "+tgl.getFullYear()+" Pukul "+jam+":"+menit+":"+detik);

@@ -1,6 +1,6 @@
 let alas = "sandal"
 let warna = "biru"
-let harga = "murah"
+let harga = "mahal"
 
 switch (true){
     case alas == "sandal" && warna == "merah" && harga == "murah":
