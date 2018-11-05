@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Array HTML</title>
+</head>
+<body>
+    <table border="1" id="tabelku">
+    </table>
+    
+    <script>
+        let student = [];
+            student[0] = [1,"Indra","Programmer"];
+            student[1] = [2,"Sugi","Accountant"]; 
+            student[2] = [3,"Meidi", "<b>CEO</b>"];
+            student[3] = [4,"Chichi", "Finance"];
+
+        let html = "<tr>"+
+                        "<th>No</th>"+
+                        "<th>Nama</th>"+
+                        "<th>Pekerjaan</th>"+
+                    "</tr>";
+
+        for(i=0; i < student.length; i++){
+            html += "<tr>";
+
+               for(j=0;j< student[i].length; j++){
+                   html += "<td>"+student[i][j]+"</td>"; 
+               } 
+            html += "</tr>";   
+        }
+        document.getElementById("tabelku").innerHTML = html;
+    </script>
+</body>
+</html>

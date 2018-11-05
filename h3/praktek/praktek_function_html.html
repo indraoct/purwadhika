@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fungsi HTML</title>
+</head>
+<body>
+    <p id="paragraf1">
+
+    </p>
+    <input type="button" onclick="isivalue()"  value="ISI SAYA"/>
+    <input type="button" onclick="kosongi()" value="KOSONGI SAYA"/>
+    <input type="button" onclick="panggilAlert()" value="PANGGIL alert"/>
+    <br/>
+    <br/>
+    <br/>
+    <input type="text" id="textSaya"/>
+    <br/>
+    <br/>
+    <input type="button" onclick="tulisInput()" value="Tulis Input"/>
+
+    <input type="text" id="textKiri"/> 
+    <input type="text" id="textKanan"/>
+    <script>
+            function isivalue(){
+                document.getElementById("paragraf1").innerHTML = "Hello World";
+            }
+
+            function kosongi(){
+                document.getElementById("paragraf1").innerHTML = "";
+            }
+
+            function panggilAlert(){
+                alert("hello world!");
+            }
+
+            function tulisInput(){
+                let x = document.getElementById("textKiri").value;
+                let y = document.getElementById("textKanan").value;
+
+                document.getElementById("textSaya").value = x * y;
+            }
+    </script>
+</body>
+</html>
