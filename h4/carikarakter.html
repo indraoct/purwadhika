@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cari Karakter</title>
+</head>
+<body>
+    <input type="text" id="inputText1"/>
+    <br/>
+    <input type="text" id="inputText2"/>
+    <br/>
+    <br/>
+    <button onclick="cariKarakter()">Cari Karakter</button>
+    <p id="result"></p>
+
+    <script>
+        function cariKarakter(){
+            var input1 = document.getElementById("inputText1").value;
+            var input2 = document.getElementById("inputText2").value;
+            var regex = new RegExp(input2,'g')
+            var result = (input1.match(regex) || []).length;
+
+            document.getElementById("result").innerHTML = "Jumlah karakter  "+input2+" sebanyak "+result;
+        }
+    </script>
+</body>
+</html>

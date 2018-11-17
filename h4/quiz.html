@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quiz</title>
+</head>
+<body>
+    <center><h1>Quiz</h1></center>
+
+    <table border="0" style="margin: auto;">
+        <tr>
+            <td colspan="4">
+                <b>1. Siapakah presiden ke 3 Republik Indonesia?</b>
+            </td>
+        </tr>
+        <tr style="text-align: center;">
+            <td><input type="radio" name="no1" value="Prof.B.J.Habibie">Prof.B.J.Habibie</td>
+            <td><input type="radio" name="no1" value="Abdurahman Wahid">Abdurahman Wahid</td>
+            <td><input type="radio" name="no1" value="Ir. Soekarno">Ir. Soekarno</td>
+            <td><input type="radio" name="no1" value="Joko Widodo">Joko Widodo</td>
+        </tr>
+        <tr>
+                <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <b>2. Berikut ini b. pemrograman kecuali</b>
+            </td>
+        </tr>
+        <tr style="text-align: center;">
+            <td><input type="radio" name="no2" value="Java">Java</td>
+            <td><input type="radio" name="no2" value="Micro:bite">Micro:bite</td>
+            <td><input type="radio" name="no2" value="Golang">Golang</td>
+            <td><input type="radio" name="no2" value="Javascript">Javascript</td>
+        </tr>
+        <tr>
+                <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <b>3. Apa judul lagu yang diduga diplagiat oleh via vallen?</b>
+            </td>
+        </tr>
+        <tr style="text-align: center;">
+            <td><input type="radio" name="no3" value="Mirasantika">Mirasantika</td>
+            <td><input type="radio" name="no3" value="Pejantan Tambun">Pejantan Tambun</td>
+            <td><input type="radio" name="no3" value="Mira E. Kono">Mira E. Kono</td>
+            <td><input type="radio" name="no3" value="Koplo Mania">Koplo Mania</td>
+        </tr>
+        <tr>
+                <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <b>4. Siapakah pemeran Batman pada saat Justice League</b>
+            </td>
+        </tr>
+        <tr style="text-align: center;">
+            <td><input type="radio" name="no4" value="Erix Soekamti">Erix Soekamti</td>
+            <td><input type="radio" name="no4" value="Broey Marantika">Broey Marantika</td>
+            <td><input type="radio" name="no4" value="Dewi Yull">Dewi Yull</td>
+            <td><input type="radio" name="no4" value="Bruce Wayne">Bruce Wayne</td>
+        </tr>
+        <tr>
+                <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+                <td colspan="4"><button onclick="cekHasil()">Submit</button></td>
+        </tr>
+        <tr>
+                <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+                <td colspan="4"><h2 id="result">Result</h2></td>
+        </tr>
+    </table>
+
+    <script>
+            function cekHasil(){
+                var benar = 0;
+                var maxBenar = 4;
+                var maxNilai = 100;
+
+                var no1 = document.querySelector('input[name="no1"]:checked').value;
+                var no2 = document.querySelector('input[name="no2"]:checked').value;
+                var no3 = document.querySelector('input[name="no3"]:checked').value;
+                var no4 = document.querySelector('input[name="no4"]:checked').value;
+
+                if(no1 == "Prof.B.J.Habibie"){
+                    benar++;
+                }
+
+                if(no2 == "Micro:bite"){
+                    benar++;
+                }
+
+                if(no3 == "Mira E. Kono"){
+                    benar++;
+                }
+
+                if(no4 == "Bruce Wayne"){
+                    benar++;
+                }
+
+                var nilai = (benar / maxBenar) * maxNilai;
+
+                document.getElementById("result").innerHTML = "Nilai anda "+nilai;
+
+            }
+    </script>
+</body>
+</html>

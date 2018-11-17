@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kuadrat</title>
+</head>
+<body>
+    <input type="number" id="inputNumber"/>
+    <br/>
+    <button onclick="kuadrat()">Kuadratkan</button>
+    <p id="result"></p>
+
+    <script>
+        function kuadrat(){
+            input = document.getElementById("inputNumber").value;
+            document.getElementById("result").innerHTML = "Hasil dari "+input+" <sup>2</sup> adalah "+Math.pow(input,2);
+        }
+    </script>
+</body>
+</html>
